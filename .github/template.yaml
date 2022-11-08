@@ -50,7 +50,7 @@ jobs:
           rm -rf .github
           export REPO_NAME=$(echo $INFO | jq -r '.repository.name')
           # Run cookiecutter
-          cookiecutter gh:simonw/python-lib --no-input \
+          cookiecutter gh:presi11/cook-template --no-input \
             lib_name=$REPO_NAME \
             description="$(echo $INFO | jq -r .repository.description)" \
             github_username="$(echo $INFO | jq -r .repository.owner.login)" \
